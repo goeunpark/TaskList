@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  font-family: Helvetica, serif;
+  font-weight: lighter;
+  background-color: lightblue;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 15% auto;
+}
+.content {
+  grid-column: 2 / 3;
+  padding-top: 100px;
+  text-transform: lowercase;
+}
