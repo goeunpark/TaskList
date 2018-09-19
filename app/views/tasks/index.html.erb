@@ -1,13 +1,16 @@
 <div class="grid-container">
-  <div class="content">
+
     <h1>Goeun's To Do list:</h1>
 
+  <div class="content">
     <ul>
       <% @tasks.each do |task| %>
       <li>
-        <%= task.action %>,  task completed:
+        <%= task.action %>,
+        <br>
+         task completed:
         <%= task.completed_date %>
-        
+
       </li>
       <% end %>
     </ul>
