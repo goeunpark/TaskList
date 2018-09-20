@@ -44,11 +44,11 @@ h1{
   padding-top: 30px;
 }
 
-.new-task  {
+.left-column  p{
   text-align: center;
 }
 
-.new-task p {
+.new-task {
   display: inline-block;
   font-size: 1.2em;
   text-align: center;
@@ -57,7 +57,7 @@ h1{
   border-radius: 20px;
 }
 
-.new-task p:hover{
+.new-task hover{
   background-color: rgb(247, 209, 124);
   border-width: 2px;
 }
