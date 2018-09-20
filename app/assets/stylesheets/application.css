@@ -18,7 +18,7 @@
   font-family: Helvetica, serif;
   text-transform: lowercase;
   font-weight: lighter;
-  background-color: rgb(238, 238, 163);
+  background-color: rgb(235, 225, 172);
   list-style-type: none;
 }
 
@@ -58,7 +58,8 @@ h1{
 }
 
 .new-task p:hover{
-  background-color: rgb(215, 227, 116);
+  background-color: rgb(247, 209, 124);
+  border-width: 2px;
 }
 
 
