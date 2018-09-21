@@ -24,5 +24,7 @@ class TasksController < ApplicationController
       redirect_to tasks_path
     else
       render :new
+    end
+
   end
 end
