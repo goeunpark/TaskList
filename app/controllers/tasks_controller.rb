@@ -25,6 +25,30 @@ class TasksController < ApplicationController
     else
       render :new
     end
+  end
 
+  def edit
+    @task = Task.find_by(id: params[:id])
+  end
+
+  def update
+    task = Task.find(params[:id])
+    task.update(task_params)
+
+    redirect_to task_path(task.id)
+  end
+
+  def destroy
+    task = Task.find_by(id: params[:id])
+
+    task.destroy
+    redirect_to tasks_path
+  end
+
+  def task_params
+    return params.require(:task).permit(
+      :action
+      :completed_date
+    )
   end
 end
