@@ -1,0 +1,12 @@
+<div class="grid-container">
+
+<%= render partial: "menu" %>
+
+  <div class="content">
+    <%= render partial: "task_form", locals: {
+      form_title: "Edit Task",
+      action_type: "Update Edited Task"
+    }
+    %>
+  </div>
+</div>
