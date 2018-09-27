@@ -1,24 +1,13 @@
 <div class="grid-container">
 
-
-
-  <div class="left-column">
-    <h1><%= link_to "Task List", tasks_path %></h1>
-
-    <p>
-      <%= link_to "New Task", new_task_path, class: "new-task"%>
-    </p>
-
-  </div>
-
+  <%= render partial: "menu" %>
 
   <div class="content">
     <h2>Selected Task</h2>
     <p>
       <%= @task.action %>
+      <%= link_to "(edit)", edit_task_path(@task.id)  %>
     </p>
-
   </div>
-
-
+  
 </div>

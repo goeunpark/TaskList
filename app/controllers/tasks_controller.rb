@@ -38,16 +38,16 @@ class TasksController < ApplicationController
     redirect_to task_path(task.id)
   end
 
-  def destroy
-    task = Task.find_by(id: params[:id])
-
-    task.destroy
-    redirect_to tasks_path
-  end
+  # def destroy
+  #   task = Task.find_by(id: params[:id])
+  #
+  #   task.destroy
+  #   redirect_to tasks_path
+  # end
 
   def task_params
     return params.require(:task).permit(
-      :action
+      :action,
       :completed_date
     )
   end

@@ -1,20 +1,12 @@
 <div class="grid-container">
 
-  <div class="left-column">
-    <h1><%= link_to "Task List", tasks_path %></h1>
-
-      <p>
-        <%= link_to "New Task", new_task_path, class: "new-task"%>
-      </p>
-
-  </div>
+  <%= render partial: "menu" %>
 
   <div class="content">
     <h2>Your Tasks</h2>
 
     <ul>
       <% @tasks.each do |task| %>
-
       <li>
         <%= task.action %>
         <%= link_to "(details)", task_path(task.id)  %>
@@ -22,7 +14,6 @@
         task completed:
         <%= task.completed_date %>
       </li>
-
       <% end %>
     </ul>
   </div>

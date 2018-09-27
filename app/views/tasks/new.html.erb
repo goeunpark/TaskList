@@ -1,31 +1,12 @@
 <div class="grid-container">
 
-  <div class="left-column">
-    <h1><%= link_to "Task List", tasks_path %></h1>
-
-    <p>
-      <%= link_to "New Task", new_task_path, class: "new-task"%>
-    </p>
-  </div>
-
+  <%= render partial: "menu" %>
 
   <div class="content">
-    <h2>To-Do list:</h2>
-    <%= form_with model: @task, class: 'new-task-form'  do |f| %>
-    <p>
-      <%= f.label :action %>
-      <%= f.text_field :action %>
-    </p>
-
-    <p>
-      <%= f.label :completed_date %>
-      <%= f.text_field :completed_date %>
-    </p>
-
-    <p>
-      <%= f.submit "Create New Task", class: "new-task-submit-button" %>
-      <% end %>
-    </p>
-
+    <%= render partial: "task_form", locals: {
+      form_title: "New Task",
+      action_type: "Create a New Task"
+    }
+    %>
   </div>
 </div>
